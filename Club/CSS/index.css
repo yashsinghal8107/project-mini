@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: 'Oswald', sans-serif;
+}
+body{
+	width: 100%;
+	background: #e1ecf2;
+}
+/*.container{
+	margin: 2px;
+}*/
+.container .nav{
+	top: 2px;
+	height: 55px;
+	width:100%;
+	display: flex;
+	position: fixed;
+}
+.container .nav .hamburger{
+	width: 60px;
+	height: 100%;
+	padding: 15px 11px;
+	background: #2e4ead; /* humburger icon bgcolor bluetype*/
+	cursor: pointer;
+	border-top-left-radius: 10px;
+}
+.container .nav .hamburger div{
+  width: 35px;
+  height: 4px;
+  background: #92a6e2; /* humburger icon */
+  margin: 5px 4px;
+  border-radius: 4px;
+}
+.container .nav .topicon{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 0 20px;
+	background: #efefef; /* nav color set*/
+	align-items: center;
+	border-top-right-radius: 10px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	justify-content: space-between;
+}
+.container .nav .topicon .admin{
+	color: #2e4ead;
+	font-size: 20px; /* admin panal text */
+	letter-spacing: 3px;
+}
+.container .nav .topicon ul{
+	display: flex;
+}
+ /*dropdown keliye profile lagaya h and span per hover*/
+.container .nav .topicon ul li .profile{
+	margin: 1px;
+	right: 0;
+	cursor: pointer;
+	display: none;
+	padding: auto;
+	font-size: 15px;
+	position: absolute;
+	background-color: #efefef;
+	min-width: 120px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+	z-index: 1;
+}
+.container .nav .topicon ul li .profile a{
+	color: black;
+	padding: 8px 10px;
+	text-decoration: none;
+	display: block; 
+	
+}
+.container .nav .topicon ul li:hover .profile{
+	display: block;
+}
+.container .nav .topicon ul li .profile a:hover{
+	background-color: #535657;
+	color: #fff;
+}
+.container .nav .topicon ul li span{
+	color: #2e4ead;
+	width: 35px;
+	height: 35px;
+	margin: 0 12px;
+	display: block;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #2e4ead;   /*right side iconboarder h*/ 
+	border-radius: 50%;
+}
+/*icon hover effect*/ 
+.container .nav .topicon ul li span:hover{
+	background: #4360b5;
+	color: #fff;
+}
+.container .nav .topicon ul li a:hover span i{
+	color: #fff;
+}
+/*leftslide bar */
+.container .leftsidebar{
+	top: 57.5px;
+	width: 242px;
+	height: 100%;
+	position: fixed;
+	background: #2e4ead;
+	border-bottom-left-radius: 10px;
+	transition: all 0.3s ease; /*leftslidebar*/
+	overflow-y: scroll;
+}
+.container .leftsidebar::-webkit-scrollbar{
+	width: 5px;
+}
+.container .leftsidebar::-webkit-scrollbar-thumb{
+	background-color: #888;
+}
+.container .leftsidebar ul li a{
+	color: #fff;
+    padding: 15px;
+    display: block;
+    position: relative;
+    margin-bottom: 1px;
+    color: #92a6e2;
+    white-space: nowrap;
+}
+
+/* leftslide bar icon a in span bar h*/
+.container .leftsidebar ul li a:before{
+	top: 0;
+	left: 0;
+	width: 3px;
+	content: "";
+	height: 100%;
+	display: none;
+	background: #92a6e2;
+	position: absolute;
+}
+.container .leftsidebar ul li a span.icon{
+	margin-right: 10px;
+	display: inline-block;
+}
+.container .leftsidebar ul li a span.title{
+	display: inline-block;
+	font-family: 'Noto Serif';
+}
+.container .leftsidebar ul li a:hover { 
+	background: #4360b5;
+	color: #fff;
+}
+.container .leftsidebar ul li a:focus {
+	background: #4360b5;
+	color: #fff;
+}
+
+.container .leftsidebar ul li a:hover:before, .container .leftsidebar ul li a.active:before{
+	display: block;
+}
+.container.collapse .leftsidebar{
+  width: 60px;
+}
+.container.collapse .leftsidebar ul li a{
+  text-align: center; 
+}
+.container.collapse .leftsidebar ul li a span.icon{
+  margin: 0;
+}
+.container.collapse .leftsidebar ul li a span.title{
+  display: none;
+}
+.container.collapse .alltext{
+  width: (100% - 70px);
+  margin-left: 70px;
+}
+#Approve {
+	display:none;
+}
+#AddClubs {
+	display:none;
+}
+#btn {
+	display:none;
+}
+#Request{
+	display: none;
+}
+#Documents{
+	display: none;
+}
+#Payments{
+	display: none;
+}
+#Profile{
+	display: none;
+}
+/* alltext content boxs*/
+.container .alltext{
+	width: auto;
+	margin-top: 50px;
+	margin-left: 230px;
+	padding: 15px 2px 2px 20px;
+	transition: all 0.3s ease;
+}
+.container .alltext .content{
+	margin: 2px;
+	padding: 10px;
+	font-size: 15px;
+	line-height: 22px;
+	background-color: #fff;
+}
+.container .alltext .tdesh
+{
+	display: inline-block;
+	background-color:#1B489E ;
+	color: #fff; 
+	margin: 9px;
+	padding: 15px;
+}
+.container .alltext .tdesh span{
+	margin: 2px;
+	font-size: 17px;
+	font-family: 'Noto Serif';
+	
+}
+/* */
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	.container .alltext .cprofile{
+	margin: 2px; 
+	font-size: 15px;
+	width: auto;
+	width: (100%-400px);
+} 
+	.container .alltext .cprofile .profile1 {
+		width: (100%-500px);
+	}
+}
+/*table content finish */
+
+.container .alltext .content1{
+	margin: 2px;
+	padding: 8px;
+	font-size: 15px;
+	line-height: 22px;
+	background-color: #fff;
+	text-align: center;
+	width: 100%;
+}
+.container .alltext .content1 h2{text-align: center; background-color: #BBC3D1;
+  padding: 10px;
+}
+.container .alltext .content1 h3{text-align: center;margin: 4px;font-family: 'Noto Serif';
+  padding: 0px;
+}
+.container .alltext .content1 .cposter{
+	margin: 0 auto;
+	padding: 10px;
+	font-family: 'Noto Serif';
+	background-color: #000;
+	color: #fff;
+	width: (100%-400px);
+	display: inline-block;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+}
+.cposter .title , .pos1 .title {
+  color: grey;
+  font-size: 14px;
+}
+.button {
+  margin: 0;
+  padding:6px 0px;
+  display: inline-block;
+  color: white;
+  background-color:#e67300;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+/*=================apprved / rejected content set ================*/
+
+.container .alltext .capprove{
+	margin: 2px; 
+	text-align: center;
+	font-size: 15px;
+	width: auto;
+} 
+.container .alltext .capprove .pos1 {
+	margin: 0px 4px 6px 0px;
+	padding: 5px;
+	border-radius: 8px;
+	font-family: 'Noto Serif';
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	width: (100%-400px);
+	display: inline-block;
+}
+/* ============================================ Profile ========================== */
+.container .alltext .cprofile{
+	font-size: 15px;
+	display: block;
+	width: auto;
+} 
+.container .alltext .cprofile .profile1 {
+	margin-left: 20px;
+	margin-top:  20px;
+	border-radius: 8px;
+	display: inline-block;
+	width: 525px;
+	font-family: 'Noto Serif';
+	background-color: #fff;
+	color: #000;
+}
+.container .alltext .cprofile .profile2 {
+	margin-left: 20px;
+	margin-top: 20px;
+	border-radius: 8px;
+	width: 525px;
+	font-family: 'Noto Serif';
+	display: inline-block;
+	background-color: #fff;
+	color: #000;
+}
+@media only screen and (max-width: 860px),
+(min-device-width: 650px) and (max-device-width: 1024px)  {
+	.container .alltext .cprofile{
+	font-size: 15px;
+	display: block;
+	width: auto;
+} 
+.container .alltext .cprofile .profile1, .container .alltext .cprofile .profile2 {
+	margin-left: 10px;
+	margin-top:  10px;
+	border-radius: 4px;
+	display: inline-block;
+	width: auto;
+	font-family: 'Noto Serif';
+	background-color: #fff;
+	color: #000;
+}
+}
+.Changepsw{
+	margin: 0;
+	padding: 30px;
+	width: 100%;
+}
+.Chpsw{
+	margin: 20px;
+	padding:30px;
+	font-size: 18px;
+}
+.Chpswbox{
+	display: flex;
+  	width: 100%;
+}
+.btn1{
+	background-color: #545452;
+	color: #FFF;
+	border-radius: 8px;
+	width: 100%;
+	text-align: center;
+	margin: 10px;
+	font-size: 20px;
+	padding:10px; 
+}
+input{
+	border-radius: 30px;
+	width: 100%;
+	padding: 8px;
+	margin: 0;
+}
